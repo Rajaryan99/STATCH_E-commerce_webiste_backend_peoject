@@ -15,7 +15,7 @@ const ownerSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-         orders: {
+         products: {
             type: Array,
             default: []
         },
