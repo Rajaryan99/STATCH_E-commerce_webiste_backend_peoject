@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const  debug = require('debug')('development:mongoose')
 
 main()
 .then(() => {
