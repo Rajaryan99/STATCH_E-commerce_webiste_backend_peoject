@@ -19,9 +19,7 @@ const userSchema  = mongoose.Schema(
             type: Array,
             default: []
         },
-         isAdmin: {
-            type: Boolean,
-        },
+        
         orders: {
             type: Array,
             default: []
