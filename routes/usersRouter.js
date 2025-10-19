@@ -4,9 +4,12 @@ const userModel = require('../models/user.model');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-router.post('/register',  (req, res) => {
+router.post('/register', async  (req, res) => {
     try {
         let { username, email, password } = req.body;
+
+        let user  = await userModel.findOne({email: email});
+        if( user) return res.status(401).send('You already have any account')
 
 
         bcrypt.genSalt(10, (err, salt) => {
